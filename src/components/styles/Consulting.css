@@ -1,0 +1,32 @@
+.consulting__main__container {
+    display: flex;
+}
+
+.consulting__image__container {
+    display: flex;
+}
+
+.patientdata__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name__section__container {
+    display: flex;
+    background: black;
+    opacity: 0.9;
+    justify-content: center;
+}
+
+.consulting__form__container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 40px;
+    /* outline: solid 3px blue; */
+}
+
+.patient__section {
+    color: #AFB42B;
+    text-align: center;
+}
