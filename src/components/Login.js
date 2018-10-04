@@ -89,7 +89,7 @@ class Login extends Component {
       <div>
         <div className='imageLogin__container'>
           <img src={ loginImage } alt=''></img>
-          <div classNane='login__container' style={ formStyles }>
+          <div className='login__container' style={ formStyles }>
             <form onSubmit={ this.login }>
               <TextField style={ textField }
                 required

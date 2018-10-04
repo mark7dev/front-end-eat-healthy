@@ -30,6 +30,13 @@ import AuthService from '../Utils/AuthService';
 //     },
 // })
 
+const HideButton = () => (
+    localStorage.getItem('jwt') === null
+    ? <Button style={ ButtonStyles } color='inherit' component={ Link } to='/signup'>Sign Up</Button>:''
+  )
+  
+
+
 const AuthButton = withRouter(({ history }) => (
     // AuthService.isAuthenticated === true
     localStorage.getItem('jwt') !== null
@@ -101,12 +108,12 @@ class Header extends Component {
             background: '#AFB42B',
         };
 
-        const ButtonStyles = {
-            background: '#AFB42B',
-            // background: '#FFA000',
-            fontFamily: 'Patrick Hand SC',
-            fontSize: 20, 
-        };
+        // const ButtonStyles = {
+        //     background: '#AFB42B',
+        //     // background: '#FFA000',
+        //     fontFamily: 'Patrick Hand SC',
+        //     fontSize: 20, 
+        // };
 
         const LogoStyles = {
             flex: 1,
@@ -121,7 +128,7 @@ class Header extends Component {
         //     background: 'red',
         // }
 
-
+// console.log(this.state)
         return (
             <div>
                 {/* <MuiThemeProvider theme={ theme }> */}
@@ -135,7 +142,8 @@ class Header extends Component {
                         </Link>
                             {/* <Link style={ AppBarStyles } to='/'>LOGO</Link> */}
                         <AuthButton/>
-                        <Button component={ Link } to='/signup' style={ ButtonStyles } color="inherit">Sign Up</Button>
+                        <HideButton/>
+                        {/* <Button component={ Link } to='/signup' style={ ButtonStyles } color="inherit">Sign Up</Button> */}
                     </Toolbar>
 
                     

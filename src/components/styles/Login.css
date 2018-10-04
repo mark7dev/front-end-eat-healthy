@@ -17,7 +17,15 @@
     /* opacity: 0.6; */
 }
 
+/* .login__container {
+    position: relative;
+    display: flex;
+    background: white;
+    opacity: 0.9;
+} */
+
 .button__login__container {
     display: flex;
     justify-content: center;
 }
+
