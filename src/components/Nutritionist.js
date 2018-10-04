@@ -44,18 +44,20 @@ class Nutritionist extends Component {
                             <div className='icon__search__container'>
                               <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
-                            <div className='input__search__container'>
-                              <input 
-                                className="input__search" 
-                                type="text" 
-                                onChange={ this.handleChange } 
-                                name="email"/>
-                            </div>
-                            <div className='button__search__container'>
-                                <Link to= { `/nutritionist/consulting/${ this.state.email }` }>
-                                    <button>Search</button>
-                                </Link>
-                            </div>
+                            <form className='searchPatient'>
+                                <div className='input__search__container'>
+                                <input 
+                                    className="input__search" 
+                                    type="text" 
+                                    onChange={ this.handleChange } 
+                                    name="email"/>
+                                </div>
+                                <div className='button__search__container'>
+                                    <Link to= { `/nutritionist/consulting/${ this.state.email }` }>
+                                        <button type='submit'>Search</button>
+                                    </Link>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div className='last__container'>

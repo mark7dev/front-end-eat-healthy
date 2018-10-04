@@ -285,7 +285,7 @@ componentWillMount (){
                                 </TableHead>
                                 <TableBody>
                                     <TableRow >
-                                        <TableCell>{ this.state.user.dateRegister }</TableCell>
+                                        {/* <TableCell>{ this.state.user.dateRegister }</TableCell>
                                         <TableCell>{ this.state.user.name }</TableCell>
                                         <TableCell>{ this.state.user.lastName }</TableCell>
                                         <TableCell>{ this.state.user.age }</TableCell>
@@ -295,7 +295,18 @@ componentWillMount (){
                                         <TableCell>{ this.state.user.email }</TableCell>
                                         <TableCell>{ this.state.user.company }</TableCell>
                                         <TableCell>{ this.state.user.telephone }</TableCell>
-                                        <TableCell>{ this.state.user.email }</TableCell>
+                                        <TableCell>{ this.state.user.email }</TableCell> */}
+                                        <TableCell>1</TableCell>
+                                        <TableCell>90</TableCell>
+                                        <TableCell>195</TableCell>
+                                        <TableCell>30</TableCell>
+                                        <TableCell>80</TableCell>
+                                        <TableCell>10</TableCell>
+                                        <TableCell>15</TableCell>
+                                        <TableCell>70</TableCell>
+                                        <TableCell>20</TableCell>
+                                        <TableCell>25</TableCell>
+                                        <TableCell>46.15</TableCell>
                                     </TableRow>
                                 </TableBody>
                             </Table>

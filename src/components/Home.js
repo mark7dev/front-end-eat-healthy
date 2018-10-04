@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import homeImage from '../images/home3.jpg';
+// import homeImage from '../images/cover4.jpeg';
+
 import './styles/Home.css';
 
 class Home extends Component {

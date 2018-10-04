@@ -151,13 +151,15 @@ class Header extends Component {
                             <ListItem>
                                 <ListItemText style={ ListItemTextStyle } primary="" />
                             </ListItem>
+                            { localStorage.getItem('nutritionist') === 'true' ? '':
                             <ListItem button>
                                 <Link style={ linkStyles } to='/patient'>Patient</Link>
-                            </ListItem>
+                            </ListItem>}
                             <Divider />
+                            { localStorage.getItem('nutritionist') === 'false' ? '':
                             <ListItem button>
                                 <Link style={ linkStyles } to='/nutritionist'>Nutritionist</Link>
-                            </ListItem>
+                            </ListItem>}
                             <Divider />
                             <ListItem button>
                                 <Link style={ linkStyles } to='/plans'>Nutrition plans</Link>

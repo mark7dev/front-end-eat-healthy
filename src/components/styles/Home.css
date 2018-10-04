@@ -8,6 +8,10 @@
     height: 450px;
     display: flex;
     align-items: center;
+
+    /* background-image: url("../../images/cover4.jpeg");
+    background-repeat: no-repeat; */
+    
 }
 
 .image__container img {
@@ -28,9 +32,9 @@
     /* font-family: 'Patrick Hand SC', cursive; */
 
 .slogan {
-    font-size: 90px;
+    font-size: 80px;
     color: #FFFFFF;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Charmonman', cursive;
     font-weight: bolder;
     /* margin-top: 0px; */
     text-shadow: 3px 3px #7B1FA2;
