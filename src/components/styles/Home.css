@@ -61,15 +61,15 @@ section {
 }
 
 #section1 {
-    background-image: url('../../images/welcome.jpg');
+    background-image: url('../../images/home.jpeg');
 }
 
 #section2 {
-    background-image: url('../../images/home1.jpg');
+    background-image: url('../../images/nutritionist10.jpeg');
 }
 
 #section3 {
-    background-image: url('../../images/home2.jpg');
+    background-image: url('../../images/home2.jpeg');
 }
 
 .points {

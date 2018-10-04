@@ -1,5 +1,11 @@
 .consulting__main__container {
     display: flex;
+    flex-direction: column;
+}
+
+.consulting__container1 {
+    display: flex;
+    flex-direction: row;
 }
 
 .consulting__image__container {
@@ -13,20 +19,30 @@
 
 .name__section__container {
     display: flex;
-    background: black;
-    opacity: 0.9;
-    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.name__section__container h1 {
+    text-shadow: 1px 1px black;
+    margin-left: 20px;
 }
 
 .consulting__form__container {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-right: 40px;
-    /* outline: solid 3px blue; */
 }
 
 .patient__section {
     color: #AFB42B;
     text-align: center;
+}
+
+.button__save__container {
+    display: flex;
+    margin-left: 20px;
+}
+
+.consulting__container2 {
+    display: flex;
 }

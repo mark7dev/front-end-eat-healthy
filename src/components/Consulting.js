@@ -51,7 +51,7 @@ componentWillMount (){
         const textField = {
             marginLeft: 10,
             marginRight: 10,
-            marginTop: 10,
+            marginTop: 20,
         }
         
         const buttonStyle = {
@@ -61,214 +61,247 @@ componentWillMount (){
         }
 
         const TableStyles = {
-            marginTop: 30
+            // marginTop: 30
           };
 
 
         return (
             <div className='consulting__main__container'>
-                <div className='consulting__image__container'>
-                    <img id='img1' src= { imageNutritionist1 } alt=''></img>
+                <div className='consulting__container1'>
+                    <div className='consulting__image__container'>
+                        <img id='img1' src= { imageNutritionist1 } alt=''></img>
+                    </div>
+                    <div className='patientdata__container'>
+                        <div className='patient__info__container'>
+                            <div className='name__section__container'>
+                                <h1 className='patient__section'>Patient Information</h1>
+                            </div>
+                            <div className='patient__info__board'>
+                            <Table style={ TableStyles }>
+                                <TableHead>
+                                    <TableRow>
+                                        {/* <TableCell>ID</TableCell> */}
+                                        <TableCell>Registration date</TableCell>
+                                        <TableCell>Name</TableCell>
+                                        <TableCell>Last Name</TableCell>
+                                        <TableCell>Age</TableCell>
+                                        <TableCell>Gender</TableCell>
+                                        <TableCell>Company</TableCell>
+                                        <TableCell>Telephone</TableCell>
+                                        <TableCell>Email</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow >
+                                        {/* <TableCell>{ this.state.user._id }</TableCell> */}
+                                        <TableCell>{ this.state.user.dateRegister }</TableCell>
+                                        <TableCell>{ this.state.user.name }</TableCell>
+                                        <TableCell>{ this.state.user.lastName }</TableCell>
+                                        <TableCell>{ this.state.user.age }</TableCell>
+                                        <TableCell>{ this.state.user.gender }</TableCell>
+                                        <TableCell>{ this.state.user.company }</TableCell>
+                                        <TableCell>{ this.state.user.telephone }</TableCell>
+                                        <TableCell>{ this.state.user.email }</TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+                            </div>
+                        </div>
+                        <div className='consulting__form__container'>
+                            <div className='name__section__container'>
+                                <h1 className='patient__section'>Consulting</h1>
+                            </div>
+                            <div style={ formStyles }>
+                                <form onSubmit={ this.onSubmit }>
+                                    <div>
+                                        <TextField style={ textField }
+                                            required
+                                            label="Date of consulting"
+                                            name="dateConsulting"
+                                            variant="outlined"
+                                            helperText="YYYY-MM-DD  Example: 2018-10-25"
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Number of month"
+                                            type="number" 
+                                            name="numberMonth"
+                                            variant="outlined"
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Weight"
+                                            type="number"
+                                            name="weight"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Height" 
+                                            type="number"                               
+                                            name="height"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Waist circumference" 
+                                            type="number"                               
+                                            name="waistCircumference"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Hip circumference"
+                                            type="number"                                
+                                            name="hipCircumference"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Fat mass"
+                                            type="number"                                
+                                            name="fatMass%"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">%</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Fat mass"
+                                            type="number"                                
+                                            name="fatMass"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Muscle mass"
+                                            type="number"                                
+                                            name="muscleMass%"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">%</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Muscle mass"
+                                            type="number"                                
+                                            name="muscleMass"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="Body water"
+                                            type="number"                                
+                                            name="bodywater"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">%</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="MUAC"
+                                            type="number"                                
+                                            name="muac"
+                                            variant="outlined"
+                                            helperText="Mid-upper-arm-circumference"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                        <TextField style={ textField }
+                                            required
+                                            label="IMC"
+                                            type="number"                                
+                                            name="imc"
+                                            variant="outlined"
+                                            InputProps={{
+                                                endAdornment: <InputAdornment position="end">Kg/m</InputAdornment>,
+                                            }}
+                                            onChange={ this.handleChange }
+                                        />
+                                    </div>
+                                    <div className='button__save__container'>
+                                        <Button type='submit' style={ buttonStyle } variant='contained'>Save</Button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className='patientdata__container'>
-                    <div className='patient__info__container'>
+                <div className='consulting__container2'>   
+                    <div className='tracking__container'>
                         <div className='name__section__container'>
-                            <h1 className='patient__section'>Patient Information</h1>
+                            <h1 className='patient__section'>Tracking</h1>
                         </div>
-                        <div className='patient__info__board'>
-                        <Table style={ TableStyles }>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>ID</TableCell>
-                                    <TableCell>Registration date</TableCell>
-                                    <TableCell>Name</TableCell>
-                                    <TableCell>Last Name</TableCell>
-                                    <TableCell>Age</TableCell>
-                                    <TableCell>Gender</TableCell>
-                                    <TableCell>Company</TableCell>
-                                    <TableCell>Telephone</TableCell>
-                                    <TableCell>Email</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                            {/* { this.state.companies.map(company => {
-                                return ( */}
-                                <TableRow >
-                                    <TableCell>{ this.state.user._id }</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                    <TableCell>PRUEBAS</TableCell>
-                                </TableRow>
-                            {/* //     );
-                            // }) } */}
-                            </TableBody>
-                        </Table>
-                        </div>
-                    </div>
-                    <div className='consulting__form__container'>
-                        <h1 className='patient__section'>Consulting</h1>
-                        <div style={ formStyles }>
-                            <form onSubmit={ this.onSubmit }>
-                                <TextField style={ textField }
-                                    required
-                                    label="Email"
-                                    type="email"
-                                    name="email"
-                                    variant="outlined"
-                                    
-                                    fullWidth
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Date of register"
-                                    name="dateRegister"
-                                    variant="outlined"
-                                    helperText="YYYY-MM-DD  Example: 2018-10-25"
-        
-                                    // placeholder="YYYY-MM-DD  Example: 2018-10-25"
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Weight"
-                                    type="number"
-                                    name="weight"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Height" 
-                                    type="number"                               
-                                    name="height"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">cm</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Waist circumference" 
-                                    type="number"                               
-                                    name="waistCircumference"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">cm</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Hip circumference"
-                                    type="number"                                
-                                    name="hipCircumference"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">cm</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Fat mass"
-                                    type="number"                                
-                                    name="fatMass%"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">%</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Fat mass"
-                                    type="number"                                
-                                    name="fatMass"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Muscle mass"
-                                    type="number"                                
-                                    name="muscleMass%"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">%</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Muscle mass"
-                                    type="number"                                
-                                    name="muscleMass"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="Body water"
-                                    type="number"                                
-                                    name="bodywater"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">%</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="MUAC"
-                                    type="number"                                
-                                    name="muac"
-                                    variant="outlined"
-                                    helperText="Mid-upper-arm-circumference"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">cm</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                <TextField style={ textField }
-                                    required
-                                    label="IMC"
-                                    type="number"                                
-                                    name="imc"
-                                    variant="outlined"
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">Kg/m</InputAdornment>,
-                                    }}
-                                    onChange={ this.handleChange }
-                                />
-                                {/* <TextField style={ textField }
-                                    required
-                                    label="Age"
-                                    type="number"
-                                    name="age"
-                                    variant="outlined"
-                                    onChange={ this.handleChange }
-                                /> */}
-                                <Button type='submit' style={ buttonStyle } variant='contained'>Save</Button>
-                            </form>
+                        <div className='tracking__board'>
+                            <Table style={ TableStyles }>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Month</TableCell>
+                                        <TableCell>Weight Kg</TableCell>
+                                        <TableCell>Height cm</TableCell>
+                                        <TableCell>Waist circumference cm</TableCell>
+                                        <TableCell>Hip circumference cm</TableCell>
+                                        <TableCell>Fat mass %</TableCell>
+                                        <TableCell>Fat mass Kg</TableCell>
+                                        <TableCell>Muscle mass %</TableCell>
+                                        <TableCell>Body water %</TableCell>
+                                        <TableCell>MUAC cm</TableCell>
+                                        <TableCell>IMC Kg/m</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow >
+                                        <TableCell>{ this.state.user.dateRegister }</TableCell>
+                                        <TableCell>{ this.state.user.name }</TableCell>
+                                        <TableCell>{ this.state.user.lastName }</TableCell>
+                                        <TableCell>{ this.state.user.age }</TableCell>
+                                        <TableCell>{ this.state.user.gender }</TableCell>
+                                        <TableCell>{ this.state.user.company }</TableCell>
+                                        <TableCell>{ this.state.user.telephone }</TableCell>
+                                        <TableCell>{ this.state.user.email }</TableCell>
+                                        <TableCell>{ this.state.user.company }</TableCell>
+                                        <TableCell>{ this.state.user.telephone }</TableCell>
+                                        <TableCell>{ this.state.user.email }</TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         );
     }

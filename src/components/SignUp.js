@@ -16,7 +16,7 @@ import {
 
 import { withRouter } from 'react-router-dom';
 // import { Redirect } from 'react-router-dom';
-import signupImage from '../images/sign.jpg';
+import signupImage from '../images/signup.jpeg';
 
 
 // const styles = theme => ({
@@ -102,7 +102,9 @@ class SignUp extends Component {
       }
     
       const buttonStyle = {
-        marginTop: 30
+        marginTop: 30,
+        background: '#AFB42B',
+        color:'white',
       }
   
       // const { redirectToReferrer } = this.state;
@@ -121,7 +123,9 @@ class SignUp extends Component {
               <img src={ signupImage } alt=''></img>
             </div>
             <div className='signup__form__container'>
-              <h1>Sign Up</h1>
+              <div className='signup__text__container'>
+                <h1>Sign Up</h1>
+              </div>
               <div style={ formStyles2 }>
                 <form onSubmit={ this.onSubmit }>
                   <TextField style={ textField }
@@ -198,7 +202,9 @@ class SignUp extends Component {
                     fullWidth
                     onChange={ this.handleChange }
                   />
-                  <Button type='submit' style={ buttonStyle } variant='contained'>SignUp</Button>
+                  <div className='button_signup__container'>
+                    <Button type='submit' style={ buttonStyle } variant='contained'>Sign Up</Button>
+                  </div>
                 </form>
               </div>
               {/* <div style={ formStyles }>

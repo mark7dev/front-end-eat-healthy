@@ -9,7 +9,7 @@ import {
 import AuthService from '../Utils/AuthService';
 
 import { Redirect } from 'react-router-dom';
-import loginImage from '../images/login.jpg';
+import loginImage from '../images/login.jpeg';
 import './styles/Login.css';
 
 class Login extends Component {
@@ -65,7 +65,15 @@ class Login extends Component {
     };
 
     const buttonStyle = {
-      marginTop: 30
+      marginTop: 30,
+      background: '#AFB42B',
+      color:'white',
+    }
+
+    const textField = {
+      marginLeft: 10,
+      marginRight: 10,
+      marginTop: 10,
     }
 
     const { redirectToReferrer } = this.state;
@@ -83,22 +91,26 @@ class Login extends Component {
           <img src={ loginImage } alt=''></img>
           <div classNane='login__container' style={ formStyles }>
             <form onSubmit={ this.login }>
-              <TextField
+              <TextField style={ textField }
                 required
                 name="email"
                 label="Email"
+                variant="outlined"
                 fullWidth
                 onChange={ this.handleChange }
               />
-              <TextField
+              <TextField style={ textField }
                 required
                 name="password"
                 type="password"
                 label="Password"
+                variant="outlined"
                 fullWidth
                 onChange={ this.handleChange }
               />
-              <Button type='submit' style={ buttonStyle } variant='contained'>Login</Button>
+              <div className='button__login__container'>
+                <Button type='submit' style={ buttonStyle } variant='contained'>Log In</Button>
+              </div>            
             </form>
 
               <Snackbar

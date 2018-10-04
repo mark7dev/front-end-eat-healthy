@@ -33,14 +33,27 @@ import AuthService from '../Utils/AuthService';
 const AuthButton = withRouter(({ history }) => (
     // AuthService.isAuthenticated === true
     localStorage.getItem('jwt') !== null
-      ? <Button color='inherit' onClick={() => {
+      ? <Button style={ ButtonStylesIn } color='inherit' onClick={() => {
         AuthService.signout(() => {
           history.push('/')
         });
-      }}>Logout</Button>
-      : <Button component={ Link } to='/login' color='inherit'>Login</Button>
+      }}>Log Out</Button>
+      : <Button style={ ButtonStyles } component={ Link } to='/login' color='inherit'>Log In</Button>
   ))
   
+    const ButtonStyles = {
+        background: '#AFB42B',
+        fontFamily: 'Patrick Hand SC',
+        fontSize: 20, 
+    };
+
+    const ButtonStylesIn = {
+        background: 'black',
+        // opacity: '0.9',
+        fontFamily: 'Patrick Hand SC',
+        fontSize: 20,
+        color: 'white' 
+    };
 
 
 class Header extends Component {
@@ -93,6 +106,15 @@ class Header extends Component {
             // background: '#FFA000',
             fontFamily: 'Patrick Hand SC',
             fontSize: 20, 
+        };
+
+        const LogoStyles = {
+            flex: 1,
+            fontFamily: 'Patrick Hand SC', 
+            fontSize: 40,
+            color: 'white',
+            textDecoration: 'none',
+
         }
 
         // const prueba = {
@@ -108,14 +130,12 @@ class Header extends Component {
                         <IconButton onClick={ this.toggleDrawer } color="inherit" aria-label="Menu">
                             <MenuIcon />
                         </IconButton>
-                        <Typography style={ AppBarStyles } variant="title" color="inherit">Eat Healthy</Typography>
-                        {/* <ListItem button> */}
-                            <Link style={ AppBarStyles } to='/'>LOGO
-                                {/* <img id='logo__header' src={ Logo } alt=''></img> */}
-                            </Link>
-                        {/* </ListItem> */}
+                        <Link style={ LogoStyles } to='/'>
+                            <Typography style={ AppBarStyles } variant="title" color="inherit">Eat Healthy</Typography>
+                        </Link>
+                            {/* <Link style={ AppBarStyles } to='/'>LOGO</Link> */}
                         <AuthButton/>
-                        <Button component={ Link } to='/signup' style={ ButtonStyles } color="inherit">Sign up</Button>
+                        <Button component={ Link } to='/signup' style={ ButtonStyles } color="inherit">Sign Up</Button>
                     </Toolbar>
 
                     

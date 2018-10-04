@@ -14,9 +14,10 @@
     width: 100%;
     height: 730px;
     position: absolute;
-    opacity: 0.6;
+    /* opacity: 0.6; */
 }
 
-.loginContainer {
-    position: relative;
+.button__login__container {
+    display: flex;
+    justify-content: center;
 }
