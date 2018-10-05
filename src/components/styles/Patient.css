@@ -1,0 +1,41 @@
+.patient__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient__image__contianer {
+    display: flex;
+    justify-content: center;
+}
+
+.patient__image__contianer img {
+    width: 50%;
+    height: 50%;
+}
+
+.patient__image__contianer img:hover {
+    filter: sepia(60%);
+    transition:all .5s ease-in-out;
+}
+
+.patient__text__welcome {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.patient__text__welcome h1 {
+    color: #AFB42B;
+    text-shadow: 1px 1px black;
+}
+
+.patient__consultings__container {
+    /* margin: 0 auto; */
+    display: flex;
+}
+
+.patient__graphic__container {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}

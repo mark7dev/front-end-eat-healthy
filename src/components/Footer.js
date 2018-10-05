@@ -15,6 +15,7 @@ class Footer extends Component {
                     <div className='footer__container__menus'>
                         <ul className='footer__menu'>
                             Access
+                            {/* <li><Link to='/record'>Record</Link></li> */}
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/login'>Login</Link></li>
                             <li><Link to='/signup'>Sign Up</Link></li>

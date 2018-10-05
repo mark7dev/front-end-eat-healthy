@@ -22,8 +22,9 @@
     display: flex;
     /* justify-content: space-between; */
     margin-bottom: 40px;
-    width: 100%;
+    /* width: 100%; */
     flex-direction: row;
+    margin: 0 auto;
 }
 
 .icon__search__container i {

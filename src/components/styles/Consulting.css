@@ -45,4 +45,10 @@
 
 .consulting__container2 {
     display: flex;
+    margin: 0 auto;
+}
+
+.graphic {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }

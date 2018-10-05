@@ -18,6 +18,7 @@ import Nutritionist from './components/Nutritionist';
 import Consulting from './components/Consulting';
 // import Prueba3 from './components/Prueba3';
 // import Prueba4 from './components/Prueba4';
+// import Record from './components/Record';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -50,6 +51,8 @@ class App extends Component {
                     <Route exact path='/contact' component= { Contact }/>
                     <Route exact path='/login' component= { Login }/>
                     <Route exact path='/signup' component= { SignUp }/>
+
+                    {/* <Route exact path='/record' component= { Record }/> */}
                     
                     {/* <Route exact path='/prueba3' component= { Prueba3 }/> */}
                     
