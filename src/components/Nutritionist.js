@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import nutritionistImage from '../images/nutritionist.jpg'
 import './styles/Nutritionist.css';
+// import { TextField } from '@material-ui/core';
+import request from 'superagent';
 
 class Nutritionist extends Component {
 
@@ -13,6 +15,23 @@ class Nutritionist extends Component {
         }
       }
     
+      searchingEmail = () => {
+        request
+        .get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
+        .then (response => {
+            // const lleno = response.body.user;
+            //     console.log(lleno.length)
+            if (response.body.user.length >0){
+                localStorage.setItem('email',response.body.user[0].email)
+                this.props.history.push('/nutritionist/consulting')
+            } else {
+                alert ('mail not found')
+            }
+
+        })
+      }
+
+
       handleChange = e => {
         this.setState ({
           [e.target.name]: e.target.value
@@ -20,18 +39,21 @@ class Nutritionist extends Component {
       }
     
       onSubmit = e => {
-        
         e.preventDefault();
+        this.searchingEmail();
+
         
-        this.setState({
-            email: this.state.email
-        })
+        // this.setState({
+        //     email: this.state.email
+        // })
+
+        
         
         
       }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         return (
             <div>
                 <div className='nutritionist__container'>
@@ -44,18 +66,19 @@ class Nutritionist extends Component {
                             <div className='icon__search__container'>
                               <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
-                            <form className='searchPatient'>
+                            <form onSubmit={this.onSubmit} className='searchPatient'>
                                 <div className='input__search__container'>
-                                <input 
-                                    className="input__search" 
-                                    type="text" 
-                                    onChange={ this.handleChange } 
-                                    name="email"/>
+                                    <input 
+                                        className="input__search"
+                                        type="text" 
+                                        onChange={ this.handleChange } 
+                                        name="email"
+                                        required/>
                                 </div>
                                 <div className='button__search__container'>
-                                    <Link to= { `/nutritionist/consulting/${ this.state.email }` }>
+                                    {/* <Link to= { `/nutritionist/consulting/${ this.state.email }` }> */}
                                         <button type='submit'>Search</button>
-                                    </Link>
+                                    {/* </Link> */}
                                 </div>
                             </form>
                         </div>

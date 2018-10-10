@@ -75,11 +75,12 @@ class Consulting extends Component {
         this.state = {
           open: false,
           user: [],
+          email: localStorage.getItem('email'),
         };
     }
 
 getUsersInfo = (props) => {
-    request.get(`http://localhost:3000/apieh/v1/users/${ this.props.match.params.emailPatient }`)
+    request.get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
     .then ( response => {
         this.setState({
             user: response.body.user[0]

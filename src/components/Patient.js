@@ -73,7 +73,7 @@ class Patient extends Component {
             <div>
                 <div className='patient__container'>
                     <div className='patient__image__contianer'>
-                        <img src={ patientImage } ></img>
+                        <img src={ patientImage } alt=''></img>
                     </div>
                     <div className='patient__text__welcome'>
                         <h1>This is your progress, you are in the right track!</h1>

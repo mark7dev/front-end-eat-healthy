@@ -25,6 +25,7 @@
     /* width: 100%; */
     flex-direction: row;
     margin: 0 auto;
+    margin-top: 40px;
 }
 
 .icon__search__container i {
