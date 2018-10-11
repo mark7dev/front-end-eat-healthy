@@ -4,7 +4,8 @@ const AuthService = {
   isAuthenticated: false,
   authenticate(credentials, done, onError) {
     request
-      .post('http://localhost:3000/apieh/v1/auth/login')
+      // .post('http://localhost:3000/apieh/v1/auth/login')
+      .post('https://boiling-peak-27661.herokuapp.com/apieh/v1/auth/login')
       .set('Content-Type', 'application/json')
       .send(credentials)
       .then(function(response) {

@@ -81,7 +81,9 @@ class Consulting extends Component {
     }
 
 getUsersInfo = (props) => {
-    request.get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
+    request
+    // .get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
+    .get(`https://boiling-peak-27661.herokuapp.com/apieh/v1/users/${ this.state.email }`)
     .then ( response => {
         this.setState({
             user: response.body.user[0]

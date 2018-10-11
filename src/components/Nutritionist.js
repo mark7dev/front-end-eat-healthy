@@ -17,7 +17,8 @@ class Nutritionist extends Component {
     
       searchingEmail = () => {
         request
-        .get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
+        // .get(`http://localhost:3000/apieh/v1/users/${ this.state.email }`)
+        .get(`https://boiling-peak-27661.herokuapp.com/apieh/v1/users/${ this.state.email }`)
         .then (response => {
             // const lleno = response.body.user;
             //     console.log(lleno.length)

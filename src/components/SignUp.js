@@ -59,7 +59,8 @@ class SignUp extends Component {
     e.preventDefault();
     
     request
-    .post('http://localhost:3000/apieh/v1/auth/signup')
+    // .post('http://localhost:3000/apieh/v1/auth/signup')
+    .post('https://boiling-peak-27661.herokuapp.com/apieh/v1/auth/signup')
     .set({
       'Content-Type': 'application/json'
     })
