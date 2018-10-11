@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import imageNutritionist1 from '../images/nutritionist1.jpeg'
 import './styles/Consulting.css'
+import { Link } from 'react-router-dom';
 
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
@@ -111,6 +112,13 @@ componentWillMount (){
             marginTop: 30,
             background: '#AFB42B',
             color:'white',
+            textDecoration: 'none',
+        }
+
+        const buttonStyleBack = {
+            background: '#AFB42B',
+            color:'white',
+            textDecoration: 'none',
         }
 
         const TableStyles = {
@@ -125,6 +133,13 @@ componentWillMount (){
                         <img id='img1' src= { imageNutritionist1 } alt=''></img>
                     </div>
                     <div className='patientdata__container'>
+                        <div className='consulting__container0'>
+                            <h2>Would you like to looking for other patient?</h2>
+                            <div className='buttonBack__container'>
+                                {/* <i className="fa fa-chevron-circle-left" aria-hidden="true"></i> */}
+                                <Button component={ Link } to='/nutritionist' className='back__button' type='submit' style={ buttonStyleBack } variant='contained'>Go back</Button>
+                            </div>
+                        </div>
                         <div className='patient__info__container'>
                             <div className='name__section__container'>
                                 <h1 className='patient__section'>Patient Information</h1>
@@ -160,6 +175,7 @@ componentWillMount (){
                                 </Table>
                             </div>
                         </div>
+                       
                         <div className='consulting__form__container'>
                             <div className='name__section__container'>
                                 <h1 className='patient__section'>Consulting</h1>

@@ -106,6 +106,7 @@ class Header extends Component {
 
         const ToolbarStyles = {
             background: '#AFB42B',
+            justifyContent: 'space-between',
         };
 
         // const ButtonStyles = {
@@ -116,7 +117,7 @@ class Header extends Component {
         // };
 
         const LogoStyles = {
-            flex: 1,
+            // flex: 1,
             fontFamily: 'Patrick Hand SC', 
             fontSize: 40,
             color: 'white',
@@ -140,9 +141,11 @@ class Header extends Component {
                         <Link style={ LogoStyles } to='/'>
                             <Typography style={ AppBarStyles } variant="title" color="inherit">Eat Healthy</Typography>
                         </Link>
-                            {/* <Link style={ AppBarStyles } to='/'>LOGO</Link> */}
-                        <AuthButton/>
-                        <HideButton/>
+                        {/* <Link style={ AppBarStyles } to='/'>LOGO</Link> */}
+                        <div className='ButtonsAuth'>
+                            <AuthButton/>
+                            <HideButton/>
+                        </div>    
                         {/* <Button component={ Link } to='/signup' style={ ButtonStyles } color="inherit">Sign Up</Button> */}
                     </Toolbar>
 

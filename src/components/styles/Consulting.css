@@ -52,3 +52,19 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+.consulting__container0 {
+    display: flex;
+    margin: 0 auto;
+}
+
+.buttonBack__container {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.buttonBack__container i {
+    font-size: 40px;
+    color: #AFB42B;
+}
